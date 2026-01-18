@@ -1,0 +1,9 @@
+{
+  "name": "Custody Lens: Transparency & Accountability Portal",
+  "description": "A secure digital ecosystem for real-time monitoring of police custody, enabling early intervention, transparency, and preventing custodial deaths through role-based accountability.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}

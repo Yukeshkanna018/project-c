@@ -1,0 +1,22 @@
+
+{
+  "short_name": "CustodyLens",
+  "name": "Custody Lens: Transparency & Justice",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='m' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230f172a'/%3E%3Cstop offset='0.5' stop-color='%231e293b'/%3E%3Cstop offset='1' stop-color='%230f172a'/%3E%3C/linearGradient%3E%3ClinearGradient id='i' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%2300FFFF'/%3E%3Cstop offset='1' stop-color='%23006688'/%3E%3C/linearGradient%3E%3Cfilter id='g'%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeMerge%3E%3CfeMergeNode/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Cpath d='M50 2 L95 18 V50 C95 85 50 98 50 98 C50 98 5 85 5 50 V18 L50 2Z' fill='url(%23m)' stroke='%231e293b' stroke-width='2'/%3E%3Cpath d='M50 2 V25 M50 75 V98 M5 18 L25 25 M95 18 L75 25' stroke='%2300FFFF' stroke-width='0.5' opacity='0.2'/%3E%3Cpath d='M50 8 L88 22 V50 C88 78 50 90 50 90 C50 90 12 78 12 50 V22 L50 8Z' fill='none' stroke='%2300FFFF' stroke-width='1.5' filter='url(%23g)'/%3E%3Cpath d='M20 50 Q50 20 80 50 Q50 80 20 50 Z' fill='%23020617' stroke='%2300FFFF' stroke-width='1'/%3E%3Ccircle cx='50' cy='50' r='16' fill='url(%23i)' opacity='0.9'/%3E%3Cpath d='M50 34 V40 M50 66 V60 M34 50 H40 M66 50 H60 M39 39 L43 43 M61 39 L57 43 M39 61 L43 57 M61 61 L57 57' stroke='%23020617' stroke-width='1'/%3E%3Cpath d='M50 43 L56 46 L56 54 L50 57 L44 54 L44 46 Z' fill='%23020617'/%3E%3Ccircle cx='50' cy='50' r='3' fill='%2300FFFF' filter='url(%23g)'/%3E%3Cellipse cx='60' cy='40' rx='4' ry='2' fill='white' opacity='0.7' transform='rotate(-45 60 40)'/%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='m' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230f172a'/%3E%3Cstop offset='0.5' stop-color='%231e293b'/%3E%3Cstop offset='1' stop-color='%230f172a'/%3E%3C/linearGradient%3E%3ClinearGradient id='i' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%2300FFFF'/%3E%3Cstop offset='1' stop-color='%23006688'/%3E%3C/linearGradient%3E%3Cfilter id='g'%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeMerge%3E%3CfeMergeNode/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Cpath d='M50 2 L95 18 V50 C95 85 50 98 50 98 C50 98 5 85 5 50 V18 L50 2Z' fill='url(%23m)' stroke='%231e293b' stroke-width='2'/%3E%3Cpath d='M50 2 V25 M50 75 V98 M5 18 L25 25 M95 18 L75 25' stroke='%2300FFFF' stroke-width='0.5' opacity='0.2'/%3E%3Cpath d='M50 8 L88 22 V50 C88 78 50 90 50 90 C50 90 12 78 12 50 V22 L50 8Z' fill='none' stroke='%2300FFFF' stroke-width='1.5' filter='url(%23g)'/%3E%3Cpath d='M20 50 Q50 20 80 50 Q50 80 20 50 Z' fill='%23020617' stroke='%2300FFFF' stroke-width='1'/%3E%3Ccircle cx='50' cy='50' r='16' fill='url(%23i)' opacity='0.9'/%3E%3Cpath d='M50 34 V40 M50 66 V60 M34 50 H40 M66 50 H60 M39 39 L43 43 M61 39 L57 43 M39 61 L43 57 M61 61 L57 57' stroke='%23020617' stroke-width='1'/%3E%3Cpath d='M50 43 L56 46 L56 54 L50 57 L44 54 L44 46 Z' fill='%23020617'/%3E%3Ccircle cx='50' cy='50' r='3' fill='%2300FFFF' filter='url(%23g)'/%3E%3Cellipse cx='60' cy='40' rx='4' ry='2' fill='white' opacity='0.7' transform='rotate(-45 60 40)'/%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#051025",
+  "background_color": "#051025",
+  "orientation": "portrait"
+}

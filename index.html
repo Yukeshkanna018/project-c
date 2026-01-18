@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="CustodyLens">
+    <meta name="theme-color" content="#051025">
+    <link rel="manifest" href="manifest.json">
+    <meta name="description" content="Custody Lens - Real-Time Transparency and Accountability for Police Custody. Preventing custodial deaths through digital oversight.">
+    <title>Custody Lens | Transparency & Justice Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='m' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230f172a'/%3E%3Cstop offset='0.5' stop-color='%231e293b'/%3E%3Cstop offset='1' stop-color='%230f172a'/%3E%3C/linearGradient%3E%3ClinearGradient id='i' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%2300FFFF'/%3E%3Cstop offset='1' stop-color='%23006688'/%3E%3C/linearGradient%3E%3Cfilter id='g'%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeMerge%3E%3CfeMergeNode/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Cpath d='M50 2 L95 18 V50 C95 85 50 98 50 98 C50 98 5 85 5 50 V18 L50 2Z' fill='url(%23m)' stroke='%231e293b' stroke-width='2'/%3E%3Cpath d='M50 2 V25 M50 75 V98 M5 18 L25 25 M95 18 L75 25' stroke='%2300FFFF' stroke-width='0.5' opacity='0.2'/%3E%3Cpath d='M50 8 L88 22 V50 C88 78 50 90 50 90 C50 90 12 78 12 50 V22 L50 8Z' fill='none' stroke='%2300FFFF' stroke-width='1.5' filter='url(%23g)'/%3E%3Cpath d='M20 50 Q50 20 80 50 Q50 80 20 50 Z' fill='%23020617' stroke='%2300FFFF' stroke-width='1'/%3E%3Ccircle cx='50' cy='50' r='16' fill='url(%23i)' opacity='0.9'/%3E%3Cpath d='M50 34 V40 M50 66 V60 M34 50 H40 M66 50 H60 M39 39 L43 43 M61 39 L57 43 M39 61 L43 57 M61 61 L57 57' stroke='%23020617' stroke-width='1'/%3E%3Cpath d='M50 43 L56 46 L56 54 L50 57 L44 54 L44 46 Z' fill='%23020617'/%3E%3Ccircle cx='50' cy='50' r='3' fill='%2300FFFF' filter='url(%23g)'/%3E%3Cellipse cx='60' cy='40' rx='4' ry='2' fill='white' opacity='0.7' transform='rotate(-45 60 40)'/%3E%3C/svg%3E">
+    <style>
+        :root {
+          --bg-slate-950: #020617;
+          --electric-indigo: #6366f1;
+          --signal-rose: #f43f5e;
+          --signal-emerald: #10b981;
+          --onyx-black: #050505;
+          --brand-cyan: #00FFFF;
+        }
+
+        body { 
+          font-family: 'Plus Jakarta Sans', sans-serif; 
+          -webkit-font-smoothing: antialiased;
+          background: #0f172a; /* Desktop background */
+          color: #0f172a;
+          overscroll-behavior-y: contain;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          margin: 0;
+        }
+
+        #root {
+          width: 100%;
+          max-width: 480px; /* Mobile frame constraint */
+          height: 100dvh; /* Dynamic viewport height */
+          background: #fdfdff;
+          position: relative;
+          overflow: hidden;
+          box-shadow: 0 0 50px rgba(0,0,0,0.5);
+          display: flex;
+          flex-direction: column;
+        }
+
+        .bg-grid {
+          background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.05) 1px, transparent 0);
+          background-size: 24px 24px;
+        }
+
+        .noise::before {
+          content: "";
+          position: absolute; /* Changed to absolute to stick to root container */
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0.04;
+          pointer-events: none;
+          z-index: 9999;
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .glass {
+          background: rgba(255, 255, 255, 0.75);
+          backdrop-filter: blur(20px) saturate(180%);
+          border-top: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .glass-dark {
+          background: rgba(5, 16, 37, 0.85);
+          backdrop-filter: blur(24px) saturate(150%);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        @keyframes scan-horizontal {
+          0% { left: -100%; }
+          100% { left: 200%; }
+        }
+        .scanner-line::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          height: 100%;
+          width: 50%;
+          background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+          animation: scan-horizontal 4s linear infinite;
+        }
+
+        @keyframes sos-aura {
+          0% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.7); }
+          70% { box-shadow: 0 0 40px 20px rgba(244, 63, 94, 0); }
+          100% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0); }
+        }
+        .animate-sos-aura { animation: sos-aura 1.5s infinite; }
+
+        @keyframes icon-distress {
+          0%, 100% { transform: scale(1); opacity: 1; }
+          25% { transform: scale(1.1) rotate(-5deg); opacity: 0.8; }
+          75% { transform: scale(1.1) rotate(5deg); opacity: 0.8; }
+        }
+        .animate-distress { animation: icon-distress 0.4s ease-in-out infinite; }
+
+        .shadow-glow-indigo {
+          box-shadow: 0 0 40px -10px rgba(0, 255, 255, 0.3);
+        }
+
+        .tracking-tactical { letter-spacing: 0.35em; }
+        
+        .framer-enter {
+          animation: reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        @keyframes reveal {
+          from { opacity: 0; transform: translateY(15px) scale(0.99); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        ::-webkit-scrollbar { width: 4px; height: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        
+        .hud-border {
+          border-image: linear-gradient(to right, #00FFFF, transparent, #00FFFF) 1;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.39.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="noise bg-grid selection:bg-cyan-500 selection:text-white">
+    <div id="root" class="framer-enter"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
